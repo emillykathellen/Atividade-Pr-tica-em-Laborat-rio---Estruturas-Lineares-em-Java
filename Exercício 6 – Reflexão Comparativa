@@ -1,0 +1,40 @@
+/*
+ * REFLEXÃO COMPARATIVA — Estruturas Lineares
+ * Nome: [seu nome] | Matrícula: [sua matrícula]
+ *
+ * a) CUSTO DA INSERÇÃO NO MEIO
+ *
+ * No array dinâmico, inserir no meio custa O(n). Faz sentido quando você
+ * pensa: tudo que tá depois da posição alvo precisa andar uma casa pra
+ * direita antes do novo elemento entrar. Se o array tem mil itens e você
+ * insere no índice 0, move mil coisas. Quanto maior, pior.
+ *
+ * Na lista encadeada isso não acontece. Tendo a referência do nó anterior,
+ * a inserção é O(1) — dois ponteiros mudam de lugar e pronto:
+ *
+ *     novo.next = anterior.next;
+ *     anterior.next = novo;
+ *
+ * O resto da lista nem fica sabendo que entrou alguém novo.
+ *
+ * b) CUSTO DE ACESSO POR ÍNDICE
+ *
+ * Array: O(1). Os elementos ficam lado a lado na memória, então acessar
+ * dados[k] é só uma conta de endereço. Direto ao ponto, sem percorrer nada.
+ *
+ * Lista encadeada: O(n). Não tem como ir direto ao índice k — você começa
+ * no head e vai saltando nó por nó até chegar lá. Os nós podem estar em
+ * qualquer lugar da memória, então não tem atalho.
+ *
+ * c) JOSEPHUS COM ARRAY
+ *
+ * Dá pra fazer. Dá pra simular a circularidade com o operador módulo (%) e
+ * ir eliminando os elementos na ordem certa. O problema é que cada remoção
+ * custa O(n), porque os elementos seguintes precisam ser deslocados pra
+ * fechar o espaço — o mesmo problema do Exercício 2.
+ *
+ * Na lista circular, remover é O(1): um ponteiro muda e o nó some. No
+ * Josephus a gente remove o tempo todo, então essa diferença vai acumulando.
+ * Com N grande, o array começa a sentir o peso disso de um jeito que a lista
+ * simplesmente não sente.
+ */
