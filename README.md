@@ -1,2 +1,4 @@
 # Atividade-Pr-tica-em-Laborat-rio---Estruturas-Lineares-em-Java
-COMP0497 – Algoritmos e Estrutura de Dados I Prof. Dr. André Yoshiaki Kashiwabara
+*COMP0497 – Algoritmos e Estrutura de Dados I Prof. Dr. André Yoshiaki Kashiwabara
+*Nome: Emilly Kathellen de Jesus Oliveira 
+*Matricula: 202400050830
